@@ -53,7 +53,6 @@ def preprocess_data(transaction, user, item):
 # 3. Filter by City and Attraction
 # ===============================
 def filter_data(df, city_df, selected_city, selected_attraction):
-    # Get city id from name
     city_row = city_df[city_df['CityName'] == selected_city]
     if city_row.empty:
         st.warning(f"City {selected_city} not found.")
